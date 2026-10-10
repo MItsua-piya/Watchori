@@ -1,0 +1,45 @@
+
+<nav class="navbar md:navbar-expand bg-1 navbar-whole">
+  <div class="container-fluid">
+    <!-- navbar icon -->
+    <a class="navbar-brand nav-icon" href="/home"><i class="fa-brands fa-hornbill"></i></a>
+
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarDrawerLabel">Genres</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body mb-2 md:mb-0">
+        <ul class="nav navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Ongoing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Completed</a>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+              Watchlist
+            </button>
+            <div class="menu">
+              <a class="menu-item" href="#">Scheduled</a>
+              <a class="menu-item" href="#">Completed</a>
+              <hr class="menu-divider">
+              <a class="menu-item" href="#">Onging</a>
+            </div>
+          </li>
+          
+        </ul>
+        <form class="hstack gap-2 " role="search">
+           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn nav-search-btn" type="submit">Search</button>
+            
+          </button>
+        </form>
+      </div>
+    </dialog>
+  </div>
+</nav>
