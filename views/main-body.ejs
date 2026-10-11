@@ -1,19 +1,14 @@
 
-<div class="img-con">
+<div class="anime-grid">
   <% animeList.forEach(anime => { %>
-    <div class="card img-card holographic-container" style="width: 18rem;">
-      <div class="card-body holographic-card">
-        <img
-          src="<%= anime.image %>"
-          class="card-img"
-          alt="<%= anime.title %>"
-        >
-
-        <h2><%= anime.title %></h2>
-        <p><%= anime.description %></p>
-        <p>Status: <%= anime.status %></p>
-        <p>Rating: <%= anime.rating %></p>
+    <div class="anime-card holographic-card">
+      <div class="poster">
+        <img src="<%= anime.image %>" alt="<%= anime.title %>">
+        <span class="badge"><%= anime.status %></span>
+        <div class="desc"><%= anime.description %></div>
       </div>
+      <div class="meta"><span class="chip">★ <%= anime.rating %></span></div>
+      <h3 class="anime-title"><%= anime.title %></h3>
     </div>
   <% }) %>
 </div>

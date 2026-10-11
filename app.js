@@ -17,7 +17,12 @@ app.get('/',(req,res)=>{
 app.get("/home",async(req,res)=>{
     try{
         const animeList =await Anime.find({});
-        res.render("homepage",{animeList});
+        if(animeList.length>0){
+res.render("homepage",{animeList});
+        }else{
+            res.send("YOur DB is empty");
+        }
+        
     }catch(err){
           console.error(err);
     res.status(500).send("Failed to load anime"); 
