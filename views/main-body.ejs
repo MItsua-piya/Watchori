@@ -1,29 +1,19 @@
-   <div class="img-con">
- <div class="card img-card holographic-container" style="width: 18rem;">
-  <div class="card-body holographic-card ">
-    <img src="\images\vertex-force.jpg" class="card-img" alt="...">
-    <h5 class="mt-2 mb-0">Image within the body</h5>
-    <p>Recommnded</p>
-  </div>
-  
-</div>
 
- <div class="card img-card holographic-container" style="width: 18rem;">
-  <div class="card-body holographic-card ">
-    <img src="\images\vertex-force.jpg" class="card-img" alt="...">
-    <h5 class="mt-2 mb-0">Image within the body</h5>
-    <p>Recommnded</p>
-  </div>
-  
-</div>
+<div class="img-con">
+  <% animeList.forEach(anime => { %>
+    <div class="card img-card holographic-container" style="width: 18rem;">
+      <div class="card-body holographic-card">
+        <img
+          src="<%= anime.image %>"
+          class="card-img"
+          alt="<%= anime.title %>"
+        >
 
- <div class="card img-card holographic-container" style="width: 18rem;">
-  <div class="card-body holographic-card ">
-    <img src="\images\vertex-force.jpg" class="card-img" alt="...">
-    <h5 class="mt-2 mb-0">Image within the body</h5>
-    <p>Recommnded</p>
-  </div>
-  
-</div>
-
+        <h2><%= anime.title %></h2>
+        <p><%= anime.description %></p>
+        <p>Status: <%= anime.status %></p>
+        <p>Rating: <%= anime.rating %></p>
+      </div>
+    </div>
+  <% }) %>
 </div>
